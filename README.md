@@ -6,8 +6,8 @@ Proof of concept for an NTP Autokey vulnerability
 Requirements
 ============
 
-*OpenSSL
-*libpcap
+* OpenSSL
+* libpcap
 
 Usage
 =====
@@ -18,6 +18,7 @@ This sample exploit assumes the following network topology:
 * E.g. if you have interface $i0 for alice and $i1 for bob, create a bridge interface $i and use ebtables to drop ntp packets
 
 ntpirate will listen on a given device for ntp packets using libpcap and forward/spoof them as needed.
+
 Just start it with ./ntpirate $i [time_offset [rsa_key_file]]
 
 If no key_file is given, one will be created on startup.
